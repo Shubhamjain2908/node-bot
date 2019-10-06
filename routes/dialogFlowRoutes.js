@@ -48,18 +48,18 @@ module.exports = app => {
 
 }
 
-const { Storage } = require('@google-cloud/storage');
-const projectId = config.googleProjectId;
-const keyFilename = "react-node-agent-yxoklv-66b6c66b549b.json";
+// const { Storage } = require('@google-cloud/storage');
+// const projectId = config.googleProjectId;
+// const keyFilename = "react-node-agent-yxoklv-66b6c66b549b.json";
 
-const storage = new Storage({ projectId, keyFilename });
-const test = async () => {
+// const storage = new Storage({ projectId, keyFilename });
+// const test = async () => {
 
-    try {
-        const credentials = await storage.getCredentials();
-        console.log('Credentials:', credentials);
-    } catch (err) {
-        console.error('ERROR:', err);
-    }
-}
-test();
+//     try {
+//         const credentials = await storage.getCredentials();
+//         console.log('Credentials:', credentials);
+//     } catch (err) {
+//         console.error('ERROR:', err);
+//     }
+// }
+// test();
