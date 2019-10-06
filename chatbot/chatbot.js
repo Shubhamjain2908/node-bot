@@ -7,7 +7,12 @@ const projectId = config.googleProjectId;
 const sessionId = config.dialogFlowSessionId;
 const languageCode = config.dialogFlowSessionLanguageCode;
 
-const sessionClient = new dialogflow.SessionsClient();
+const credentials = {
+    client_email: config.googleClientEmail,
+    private_key: config.googlePrivateKey
+};
+
+const sessionClient = new dialogflow.SessionsClient({ projectID: projectId, credentials: credentials });
 const sessionPath = sessionClient.sessionPath(projectId, sessionId);
 
 const textQuery = async (text, parameters = {}) => {
